@@ -59,3 +59,15 @@ Running Tests
 Backend:
 cd backend
 mvn test
+
+
+
+----------Roadmap--------
+✅ CRUD for Students, Teachers, Courses, Enrollments
+✅ Enrollment date overlap validation
+✅ Average grade views
+✅ Swagger documentation
+🔜 Role-based authentication
+🔜 Improved frontend UI
+🔜 GitHub Actions CI/CD
+🔜 Docker Compose one-command setup
