@@ -18,11 +18,15 @@ This document explains how to set up and run the project locally, including both
 git clone https://github.com/alpbatuhankarakas/abk_eduapp.git
 cd abk_eduapp
 
+---
+
 ## 📂 Project Structure
 ```text
 abk_eduapp/
 ├── backend/        # Spring Boot backend
 └── frontend/       # Vue 3 frontend
+
+---
 
 ## Backend Setup (Spring Boot)
 
@@ -43,6 +47,8 @@ API: http://localhost:8090/api
 
 Swagger: http://localhost:8090/swagger-ui.html
 
+---
+
 ## Frontend Setup (Vue 3)
 
 Navigate:
@@ -60,12 +66,15 @@ npm run dev
 URL:
 Frontend: http://localhost:5173/
 
+---
+
 ## Running Tests
 Backend:
 cd backend
 mvn test
 
 
+---
 
 ## ----------Roadmap--------
 ✅ CRUD for Students, Teachers, Courses, Enrollments
