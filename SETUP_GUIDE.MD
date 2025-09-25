@@ -13,6 +13,14 @@ This document explains how to set up and run the project locally, including both
 
 ---
 
+## 📂 Project Structure
+```text
+abk_eduapp/
+├── backend/        # Spring Boot backend
+└── frontend/       # Vue 3 frontend
+
+---
+
 ## 2. Clone the Repository
 ```bash
 git clone https://github.com/alpbatuhankarakas/abk_eduapp.git
@@ -20,11 +28,7 @@ cd abk_eduapp
 
 ---
 
-## 📂 Project Structure
-```text
-abk_eduapp/
-├── backend/        # Spring Boot backend
-└── frontend/       # Vue 3 frontend
+
 
 ---
 
