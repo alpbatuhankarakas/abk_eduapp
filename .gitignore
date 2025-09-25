@@ -1,0 +1,67 @@
+# =========================
+# Java / Spring Boot
+# =========================
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# Build outputs
+target/
+
+# IDE
+*.iml
+.idea/
+.vscode/
+
+# Maven wrapper jar
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# Node / Vue (Frontend)
+# =========================
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Environment / Secrets
+# =========================
+# Spring Boot configs
+src/main/resources/application.properties
+src/main/resources/application.yml
+src/test/resources/application-test.properties
+
+# Vue environment files
+vue-frontend/.env
+vue-frontend/.env.local
+vue-frontend/.env.*.local
+
+# =========================
+# OS-specific
+# =========================
+.DS_Store
+Thumbs.db
