@@ -10,9 +10,9 @@ This document explains how to set up and run the project locally, including both
 - Git
 
 2. Project Structure
-abk_eduapp/
-├── backend/        # Spring Boot backend
-└── frontend/       # Vue 3 frontend
+abk_eduapp  
+      ├── backend/        # Spring Boot backend
+      └── frontend/       # Vue 3 frontend
 
 3. Clone the Repository
 ```bash
@@ -60,7 +60,7 @@ cd backend
 mvn test
 
 
-----------Roadmap--------
+4. RoadMap
 ✅ CRUD for Students, Teachers, Courses, Enrollments
 ✅ Enrollment date overlap validation
 ✅ Average grade views
