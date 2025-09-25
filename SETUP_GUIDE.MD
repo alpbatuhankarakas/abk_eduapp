@@ -1,38 +1,25 @@
-# 🚀 ABK EduApp – Setup & Roadmap
+🚀 ABK EduApp – Setup & Roadmap
 
 This document explains how to set up and run the project locally, including both backend and frontend.
 
----
-
-## 1. Requirements
+1. Requirements
 - Java 17+
 - Maven 3.8+
 - PostgreSQL 16+
 - Node.js 18+ & npm (or Yarn)
 - Git
 
----
-
-## 📂 Project Structure
-```text
+2. Project Structure
 abk_eduapp/
 ├── backend/        # Spring Boot backend
 └── frontend/       # Vue 3 frontend
 
----
-
-## 2. Clone the Repository
+3. Clone the Repository
 ```bash
 git clone https://github.com/alpbatuhankarakas/abk_eduapp.git
 cd abk_eduapp
 
----
-
-
-
----
-
-## Backend Setup (Spring Boot)
+  A. Backend Setup (Spring Boot)
 
 Navigate:
 cd backend
@@ -51,10 +38,7 @@ API: http://localhost:8090/api
 
 Swagger: http://localhost:8090/swagger-ui.html
 
----
-
-## Frontend Setup (Vue 3)
-
+  B. Frontend Setup (Vue 3)
 Navigate:
 cd frontend
 
@@ -70,17 +54,13 @@ npm run dev
 URL:
 Frontend: http://localhost:5173/
 
----
-
-## Running Tests
+  C. Running Tests
 Backend:
 cd backend
 mvn test
 
 
----
-
-## ----------Roadmap--------
+----------Roadmap--------
 ✅ CRUD for Students, Teachers, Courses, Enrollments
 ✅ Enrollment date overlap validation
 ✅ Average grade views
