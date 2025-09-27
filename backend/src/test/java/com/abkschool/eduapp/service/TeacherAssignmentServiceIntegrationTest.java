@@ -15,6 +15,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
@@ -39,7 +41,6 @@ class TeacherAssignmentServiceIntegrationTest {
 
     @Test
     void testCreateAndFindAssignment() {
-        // --- Arrange ---
         Teacher teacher = new Teacher();
         teacher.setTeacherNumber("T1001");
         teacher.setFirstName("Alice");
@@ -52,6 +53,8 @@ class TeacherAssignmentServiceIntegrationTest {
         course.setName("Mathematics");
         course.setCredit(5);
         course.setDepartment("Science");
+        course.setStartDate(LocalDate.of(2025, 9, 1));   // ✅ zorunlu alan
+        course.setEndDate(LocalDate.of(2026, 6, 30));    // ✅ zorunlu alan
         entityManager.persist(course);
 
         TeacherAssignmentCreateRequest request = new TeacherAssignmentCreateRequest();

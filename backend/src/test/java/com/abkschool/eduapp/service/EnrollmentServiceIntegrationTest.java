@@ -15,6 +15,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
@@ -52,6 +54,8 @@ class EnrollmentServiceIntegrationTest {
         course.setName("Physics");
         course.setCredit(4);
         course.setDepartment("Science");
+        course.setStartDate(LocalDate.of(2025, 9, 1));   // ✅ eklendi
+        course.setEndDate(LocalDate.of(2026, 6, 30));    // ✅ eklendi
         entityManager.persist(course);
 
         EnrollmentCreateRequest request = new EnrollmentCreateRequest();
@@ -71,4 +75,5 @@ class EnrollmentServiceIntegrationTest {
         assertEquals(student.getId(), found.get().getStudent().getId());
         assertEquals(course.getId(), found.get().getCourse().getId());
     }
+
 }

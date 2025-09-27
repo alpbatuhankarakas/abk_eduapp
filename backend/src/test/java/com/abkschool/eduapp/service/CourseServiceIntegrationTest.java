@@ -11,6 +11,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
@@ -33,6 +35,8 @@ class CourseServiceIntegrationTest {
         request.setCourseCode("CS500");
         request.setName("Operating Systems");
         request.setCredit(4);
+        request.setStartDate(LocalDate.of(2025, 9, 1));
+        request.setEndDate(LocalDate.of(2026, 6, 30));
 
         CourseDTO dto = courseService.createCourse(request);
 

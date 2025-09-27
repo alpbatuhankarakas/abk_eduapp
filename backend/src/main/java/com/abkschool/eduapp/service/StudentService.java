@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import com.abkschool.eduapp.exception.DuplicateResourceException;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,6 +28,7 @@ public class StudentService {
         this.studentMapper = studentMapper;
     }
 
+    @Transactional(readOnly = true)
     public List<StudentDTO> getAllStudents() {
         logger.info("Fetching all students");
         List<StudentDTO> students = studentRepository.findAll()
@@ -37,6 +39,7 @@ public class StudentService {
         return students;
     }
 
+    @Transactional(readOnly = true)
     public StudentDTO getById(Long id) {
         logger.info("Fetching student with id={}", id);
         Student s = studentRepository.findById(id)
@@ -47,6 +50,7 @@ public class StudentService {
         return studentMapper.toDTO(s);
     }
 
+    @Transactional
     public StudentDTO createStudent(StudentCreateRequest request) {
         if (studentRepository.existsByEmail(request.getEmail())) {
             throw new DuplicateResourceException("Email already exists: " + request.getEmail());
@@ -59,6 +63,7 @@ public class StudentService {
         Student saved = studentRepository.save(student);
         return studentMapper.toDTO(saved);
     }
+    @Transactional
     public StudentDTO updateStudent(Long id, StudentUpdateRequest request) {
         logger.info("Updating student with id={}", id);
         Student student = studentRepository.findById(id)
@@ -73,6 +78,7 @@ public class StudentService {
         return studentMapper.toDTO(updated);
     }
 
+    @Transactional
     public void deleteStudent(Long id) {
         logger.info("Deleting student with id={}", id);
         if (!studentRepository.existsById(id)) {
